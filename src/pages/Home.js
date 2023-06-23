@@ -71,19 +71,35 @@ function Home() {
                                 <h1>Contact me</h1>
                                 <ul className={cx('right-list')}>
                                     <li className={cx('list-item')}>
-                                        <FontAwesomeIcon icon={faFacebook} />
+                                        <a
+                                            style={{ color: 'inherit' }}
+                                            href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <FontAwesomeIcon icon={faPaperPlane} />
+                                        </a>
                                     </li>
                                     <li className={cx('list-item')}>
-                                        <FontAwesomeIcon icon={faGithub} />
+                                        <a
+                                            style={{ color: 'inherit' }}
+                                            href="https://github.com/quantu99"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            {' '}
+                                            <FontAwesomeIcon icon={faGithub} />
+                                        </a>
                                     </li>
                                     <li className={cx('list-item')}>
-                                        <FontAwesomeIcon icon={faInstagram} />
-                                    </li>
-                                    <li className={cx('list-item')}>
-                                        <FontAwesomeIcon icon={faTwitter} />
-                                    </li>
-                                    <li className={cx('list-item')}>
-                                        <FontAwesomeIcon icon={faEnvelope} />
+                                        <a
+                                            style={{ color: 'inherit' }}
+                                            href="https://www.linkedin.com/in/qu%C3%A2n-t%E1%BB%AB-14809527b/"
+                                            target="_blank"
+                                            rel="noreferrer"
+                                        >
+                                            <FontAwesomeIcon icon={faLinkedin} />
+                                        </a>
                                     </li>
                                 </ul>
                             </div>

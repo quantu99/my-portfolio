@@ -198,7 +198,7 @@ function Portfilio({ scroll3 }) {
                                             <button className={cx('btn')}>
                                                 <a
                                                     style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
-                                                    href="https://quantu99.github.io/my-porfolio/"
+                                                    href="https://quantu99.github.io/my-portfolio/"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >

@@ -3,6 +3,12 @@ import classNames from 'classnames/bind';
 import img from '../../../image/avatar.jpg';
 const cx = classNames.bind(styles);
 function Wall() {
+    const moveToAbout = () => {
+        window.scrollTo({
+            top: 620,
+            behavior: 'smooth',
+        });
+    };
     return (
         <div className={cx('wrapper', 'grid')}>
             <div className={cx('container', 'row', 'no-gutters')}>
@@ -15,7 +21,9 @@ function Wall() {
                         </p>
                         <div className={cx('devide')}></div>
                     </div>
-                    <button className={cx('btn')}>About me !</button>
+                    <button onClick={moveToAbout} className={cx('btn')}>
+                        About me !
+                    </button>
                 </div>
                 <div className={cx('avatar', 'col', 'l-5')}>
                     <div className={cx('img-div', 'mask', 'mask_type4', 'mask_type4-a1', 'page__title')}>
