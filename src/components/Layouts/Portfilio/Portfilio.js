@@ -6,7 +6,7 @@ import portfolio from '../../../image/portfolio.gif';
 import background from '../../../image/2.jpg';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretRight, faCaretLeft, faL } from '@fortawesome/free-solid-svg-icons';
+import { faCaretRight, faCaretLeft } from '@fortawesome/free-solid-svg-icons';
 const cx = classNames.bind(styles);
 function Portfilio({ scroll3 }) {
     const [appear, setAppear] = useState(true);

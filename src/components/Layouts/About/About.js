@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import background from '../../../image/3.jpg';
 import styles from './About.module.scss';
 import classNames from 'classnames/bind';
