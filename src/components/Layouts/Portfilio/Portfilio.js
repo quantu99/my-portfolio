@@ -198,7 +198,7 @@ function Portfilio({ scroll3 }) {
                                             <button className={cx('btn')}>
                                                 <a
                                                     style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
-                                                    href="https://quantu99.github.io/travel-ui/"
+                                                    href="https://quantu99.github.io/my-porfolio/"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
@@ -208,7 +208,7 @@ function Portfilio({ scroll3 }) {
                                             <button className={cx('btn')}>
                                                 <a
                                                     style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
-                                                    href="https://github.com/quantu99/travel-ui"
+                                                    href="https://github.com/quantu99/my-portfolio"
                                                     target="_blank"
                                                     rel="noreferrer"
                                                 >
@@ -395,7 +395,7 @@ function Portfilio({ scroll3 }) {
                                         <button className={cx('btn')}>
                                             <a
                                                 style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
-                                                href="https://quantu99.github.io/travel-ui/"
+                                                href="https://quantu99.github.io/my-portfolio/"
                                                 target="_blank"
                                                 rel="noreferrer"
                                             >
@@ -405,7 +405,7 @@ function Portfilio({ scroll3 }) {
                                         <button className={cx('btn')}>
                                             <a
                                                 style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
-                                                href="https://github.com/quantu99/travel-ui"
+                                                href="https://github.com/quantu99/my-portfolio"
                                                 target="_blank"
                                                 rel="noreferrer"
                                             >
