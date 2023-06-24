@@ -17,6 +17,16 @@ function Message({ sendMessage }) {
             [e.target.name]: e.target.value,
         });
     };
+    // Enter event
+    document.onkeydown = function (e) {
+        switch (e.which) {
+            case 13:
+                e.preventDefault();
+                setErrors(rules(values));
+                setDataIsCorrect(true);
+                break;
+        }
+    };
     const handleLogin = (e) => {
         e.preventDefault();
         setErrors(rules(values));
