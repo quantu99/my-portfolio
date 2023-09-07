@@ -3,6 +3,7 @@ import styles from './Portfilio.module.scss';
 import sneaker from '../../../image/sneaker.gif';
 import travel from '../../../image/travel.gif';
 import portfolio from '../../../image/portfolio.gif';
+import men from '../../../image/men.gif';
 import background from '../../../image/2.jpg';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,20 +13,30 @@ function Portfilio({ scroll3 }) {
     const [appear, setAppear] = useState(true);
     const [appear2, setAppear2] = useState(false);
     const [appear3, setAppear3] = useState(false);
+    const [appear4, setAppear4] = useState(false);
     const handleClick = () => {
         setAppear(false);
         setAppear2(true);
         setAppear3(false);
+        setAppear4(false);
     };
     const handleClick2 = () => {
         setAppear(false);
         setAppear2(false);
         setAppear3(true);
+        setAppear4(false);
     };
     const handleClick3 = () => {
+        setAppear(false);
+        setAppear2(false);
+        setAppear3(false);
+        setAppear4(true);
+    };
+    const handleClick4 = () => {
         setAppear(true);
         setAppear2(false);
         setAppear3(false);
+        setAppear4(false);
     };
     return (
         <div className={cx('wrapper', 'grid')}>
@@ -88,7 +99,7 @@ function Portfilio({ scroll3 }) {
                                     </div>
                                 </div>
                                 <FontAwesomeIcon
-                                    onClick={handleClick2}
+                                    onClick={handleClick3}
                                     className={cx('icon', 'left')}
                                     icon={faCaretLeft}
                                 />
@@ -155,7 +166,7 @@ function Portfilio({ scroll3 }) {
                                     </div>
                                 </div>
                                 <FontAwesomeIcon
-                                    onClick={handleClick3}
+                                    onClick={handleClick4}
                                     className={cx('icon', 'left')}
                                     icon={faCaretLeft}
                                 />
@@ -234,6 +245,97 @@ function Portfilio({ scroll3 }) {
                             </div>
                         </div>
                     )}
+                    {appear4 && (
+                        <div className={cx('all-wrapper')}>
+                            <div className={cx('all-wrapper-2')}>
+                                <div className={cx('header-div')}>
+                                    <h1 style={{ margin: 0 }} className={cx('header')}>
+                                        Portfolio
+                                    </h1>
+                                    <div className={cx('divide')}></div>
+                                </div>
+                                <div className={cx('container', 'row', 'no-gutters')}>
+                                    <div className={cx('description-div', 'col', 'l-4', 'l-o-1', 'c-10', 'c-o-1')}>
+                                        <div className={cx('title-div')}>
+                                            <h1 className={cx('title')}>Men's Era</h1>
+                                            <div className={cx('divide-2')}></div>
+                                        </div>
+                                        <div className={cx('middle-div')}>
+                                            <p className={cx('description')}>
+                                                An second E-commerce website of mine. This project has features as: Sign
+                                                in; Sign up; Log out; Manage user’s cart, wist list; Manage user’s
+                                                information. And it still developed to add more abilities in future.
+                                            </p>
+                                            <div style={{ display: 'flex' }}>
+                                                <ul className={cx('tech-list')}>
+                                                    <p
+                                                        style={{
+                                                            color: 'white',
+                                                            fontWeight: 600,
+                                                            paddingBottom: '5px',
+                                                        }}
+                                                    >
+                                                        Front-end
+                                                    </p>
+                                                    <li className={cx('list-item')}>• ReactJs</li>
+                                                    <li className={cx('list-item')}>• HTML, CSS(SCSS)</li>
+                                                    <li className={cx('list-item')}>• JavaScript</li>
+                                                </ul>
+                                                <ul style={{ paddingLeft: '50px' }} className={cx('tech-list')}>
+                                                    <p
+                                                        style={{
+                                                            color: 'white',
+                                                            fontWeight: 600,
+                                                            paddingBottom: '5px',
+                                                        }}
+                                                    >
+                                                        Back-end
+                                                    </p>
+                                                    <li className={cx('list-item')}>• NodeJs(Express)</li>
+                                                    <li className={cx('list-item')}>• Mongodb</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className={cx('btn-div')}>
+                                            <button className={cx('btn')}>
+                                                <a
+                                                    style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
+                                                    href="https://men-era.vercel.app/"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Live
+                                                </a>
+                                            </button>
+                                            <button className={cx('btn')}>
+                                                <a
+                                                    style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
+                                                    href="https://github.com/quantu99/MenEra"
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                >
+                                                    Source
+                                                </a>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className={cx('img-div', 'col', 'l-5', 'l-o-1', 'c-10', 'c-o-1')}>
+                                        <img src={men} alt="portfolio-img" />
+                                    </div>
+                                </div>
+                                <FontAwesomeIcon
+                                    onClick={handleClick2}
+                                    className={cx('icon', 'left')}
+                                    icon={faCaretLeft}
+                                />
+                                <FontAwesomeIcon
+                                    onClick={handleClick4}
+                                    className={cx('icon', 'right')}
+                                    icon={faCaretRight}
+                                />
+                            </div>
+                        </div>
+                    )}
                 </div>
             )}
             <div className={cx('mobile')}>
@@ -292,7 +394,7 @@ function Portfilio({ scroll3 }) {
                                     <img src={sneaker} alt="sneaker-img" />
                                 </div>
                             </div>
-                            <FontAwesomeIcon onClick={handleClick} className={cx('icon', 'left')} icon={faCaretLeft} />
+                            <FontAwesomeIcon onClick={handleClick3} className={cx('icon', 'left')} icon={faCaretLeft} />
                             <FontAwesomeIcon
                                 onClick={handleClick}
                                 className={cx('icon', 'right')}
@@ -355,7 +457,7 @@ function Portfilio({ scroll3 }) {
                                     <img src={travel} alt="sneaker-img" />
                                 </div>
                             </div>
-                            <FontAwesomeIcon onClick={handleClick2} className={cx('icon', 'left')} icon={faCaretLeft} />
+                            <FontAwesomeIcon onClick={handleClick4} className={cx('icon', 'left')} icon={faCaretLeft} />
                             <FontAwesomeIcon
                                 onClick={handleClick2}
                                 className={cx('icon', 'right')}
@@ -421,6 +523,93 @@ function Portfilio({ scroll3 }) {
                             <FontAwesomeIcon onClick={handleClick} className={cx('icon', 'left')} icon={faCaretLeft} />
                             <FontAwesomeIcon
                                 onClick={handleClick3}
+                                className={cx('icon', 'right')}
+                                icon={faCaretRight}
+                            />
+                        </div>
+                    </div>
+                )}
+                {appear4 && (
+                    <div className={cx('all-wrapper')}>
+                        <div className={cx('all-wrapper-2')}>
+                            <div className={cx('header-div')}>
+                                <h1 style={{ margin: 0 }} className={cx('header')}>
+                                    Portfolio
+                                </h1>
+                                <div className={cx('divide')}></div>
+                            </div>
+                            <div className={cx('container', 'row', 'no-gutters')}>
+                                <div className={cx('description-div', 'col', 'l-4', 'l-o-1', 'c-10', 'c-o-1')}>
+                                    <div className={cx('title-div')}>
+                                        <h1 className={cx('title')}>Men's Era</h1>
+                                        <div className={cx('divide-2')}></div>
+                                    </div>
+                                    <div className={cx('middle-div')}>
+                                        <p className={cx('description')}>
+                                            An second E-commerce website of mine. This project has features as: Sign in;
+                                            Sign up; Log out; Manage user’s cart, wist list; Manage user’s information.
+                                            And it still developed to add more abilities in future.
+                                        </p>
+                                        <div style={{ display: 'flex' }}>
+                                            <ul className={cx('tech-list')}>
+                                                <p
+                                                    style={{
+                                                        color: 'white',
+                                                        fontWeight: 600,
+                                                        paddingBottom: '5px',
+                                                    }}
+                                                >
+                                                    Front-end
+                                                </p>
+                                                <li className={cx('list-item')}>• ReactJs</li>
+                                                <li className={cx('list-item')}>• HTML, CSS(SCSS)</li>
+                                                <li className={cx('list-item')}>• JavaScript</li>
+                                            </ul>
+                                            <ul style={{ paddingLeft: '50px' }} className={cx('tech-list')}>
+                                                <p
+                                                    style={{
+                                                        color: 'white',
+                                                        fontWeight: 600,
+                                                        paddingBottom: '5px',
+                                                    }}
+                                                >
+                                                    Back-end
+                                                </p>
+                                                <li className={cx('list-item')}>• NodeJs(Express)</li>
+                                                <li className={cx('list-item')}>• Mongodb</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div className={cx('btn-div')}>
+                                        <button className={cx('btn')}>
+                                            <a
+                                                style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
+                                                href="https://men-era.vercel.app/"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                Live
+                                            </a>
+                                        </button>
+                                        <button className={cx('btn')}>
+                                            <a
+                                                style={{ color: 'inherit', textDecoration: 'none', width: '100%' }}
+                                                href="https://github.com/quantu99/MenEra"
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
+                                                Source
+                                            </a>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className={cx('img-div', 'col', 'l-5', 'l-o-1', 'c-10', 'c-o-1')}>
+                                    <img src={men} alt="portfolio-img" />
+                                </div>
+                            </div>
+                            <FontAwesomeIcon onClick={handleClick2} className={cx('icon', 'left')} icon={faCaretLeft} />
+                            <FontAwesomeIcon
+                                onClick={handleClick4}
                                 className={cx('icon', 'right')}
                                 icon={faCaretRight}
                             />
